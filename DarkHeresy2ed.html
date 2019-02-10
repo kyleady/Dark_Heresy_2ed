@@ -416,12 +416,12 @@
 						<h3>Initiative</h3>
 						<div class="sheet-row">
 							<div class="sheet-item" style="width:30%">
-								<button name="roll_Initiative" title="Select your token first!" type="roll" value="/em rolls Initiative and gets [[1d10+floor(@{selected|Agility} /10) + @{selected|UnAg} &{tracker}]]."><label>Agility</label></button>
+								<button name="roll_Initiative" title="Select your token first!" type="roll" value="!init"><label>Agility</label></button>
 							</div>
 							<div class="sheet-item" style="width:1%">
 							</div>
 							<div class="sheet-item" style="width:35%">
-								<button name="roll_CInitiative" title="Select your token first!" type="roll" value="/em rolls Custom Initiative and gets [[@{selected|CInitiativeInput} &{tracker}]]."><label>Custom</label></button>
+								<button name="roll_CInitiative" title="Select your token first!" type="roll" value="!init = [[@{selected|CInitiativeInput}]]"><label>Custom</label></button>
 							</div>
 							<div class="sheet-item" style="width:34%">
 								<input name="attr_CInitiativeInput" type="text" value="1d10">
