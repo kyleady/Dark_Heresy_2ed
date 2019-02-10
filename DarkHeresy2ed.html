@@ -590,8 +590,8 @@
 							<td><input name="attr_advancedskillbox3" type="checkbox" value="10"></td>
 							<td><input name="attr_advancedskillbox4" type="checkbox" value="10"></td>
 							<td class="roll_advancedskill">
-								<button name="roll_advancedskill" type="roll" value="/em rolls @{advancedskillname}[[1d100]] Target [[@{advancedskill}+?{Modifier|0}]]">
-									<input disabled="true" name="attr_advancedskill" type="number" value=" -20 +(@{advancedskillbox1})+@{advancedskillcharacteristic}+@{advancedskillbox2}+@{advancedskillbox3} +@{advancedskillbox4}">
+								<button name="roll_advancedskill" type="roll" value="!@{advancedskillname}+?{Modifier|0}">
+									<input disabled="true" name="attr_advancedskill" type="number" value=" -20 +@{advancedskillbox1}+@{advancedskillbox2}+@{advancedskillbox3}+@{advancedskillbox4}">
 								</button>
 							</td>
 						</tr>
