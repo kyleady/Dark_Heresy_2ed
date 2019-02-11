@@ -1229,14 +1229,7 @@
 						</div>
 						<div class="sheet-row">
 							<div class="sheet-item" style="width: 25%;"><label>Focus Power:</label></div>
-							<select class="charaselect" style="width: 30%;" name="attr_PsyFocusPower">
-								<option value="?{Custom|0}"><b>Custom</option>
-								<option value="@{Perception}"><b>Perception</option>
-								<option value="@{Willpower} + (-20 + @{Psyniscience1} + @{Psyniscience2} + @{Psyniscience3} + @{Psyniscience4})"><b>Psyniscience WP</option>
-								<option value="@{Perception} + (-20 + @{Psyniscience1} + @{Psyniscience2} + @{Psyniscience3} + @{Psyniscience4})"><b>Psyniscience Per</option>
-								<option value="@{Willpower}"><b>Willpower</option>
-								<option value="@{Corruption}"><b>Corruption</option>
-							</select>
+							<div class="sheet-item" style="width: 30%;"><input name="attr_PsyFocusPower" type="text" value="Wp" /></div>
 							<div class="sheet-item" style="width: 30%;"><label>Power Modifier:</label></div>
 							<div class="sheet-item" style="width: 15%;"><input name="attr_PsyPowerModifier" type="number" value="0" /></div>
 						</div>
@@ -1249,12 +1242,17 @@
 							<div class="sheet-item" style="width: 10%;"><input name="attr_PsyDamageType" type="text" /></div>
 						</div>
 						<div class="sheet-row">
+							<div class="sheet-item" style="width: 10%;"><label>RoF:</label></div>
+							<div class="sheet-item" style="width: 17%;"><input name="attr_PsyRoF" type="text" value="S/-/-" /></div>
+							<div class="sheet-item" style="width: 17%;;"><label>Qualities:</label></div>
+							<div class="sheet-item" style="width: 56%;"><input name="attr_PsyQualities" type="text" /></div>
+						</div>
+						<div class="sheet-row">
 							<div class="sheet-item" style="width: 15%;"><label>Damage:</label></div>
-							<div class="sheet-item" style="width: 21%;"><input name="attr_PsyDamage" type="text" /></div>
+							<div class="sheet-item" style="width: 21%;"><input name="attr_PsyDamage" type="text" value="0" /></div>
 							<div class="sheet-item" style="width: 8%;"><label>Pen:</label></div>
 							<div class="sheet-item" style="width: 17%;"><input name="attr_PsyPen" type="text" /></div>
-							<div class="sheet-item" style="width: 12%;"><button name="roll_PsyHit" type="roll" value="/em uses @{PsyName} [[1d100]] Target [[@{PsyFocusPower} + ((@{PsyRating} - ?{Psy Use?|@{PsyRating}}) * 10) + @{PsyPowerModifier} + ?{Modifier|0}]]."> <label>Cast</label> </button></div>
-							<div class="sheet-item" style="width: 15%;"><button name="roll_PsyDamage" type="roll" value="/me does [[?{Damage|1d10})]] @{PsyDamageType} damage! Pen: [[?{Penetration|0}]]"> <label>Damage</label> </button></div>
+							<div class="sheet-item" style="width: 27%;"><button name="roll_PsyHit" type="roll" value="!useWeapon Focus Power Test{'custom':'@{PsyName} (Psychic; S/-/-; @{PsyDamage} @{PsyDamageType}; Pen @{PsyPen}; @{PsyQualities})','modifiers':'@{PsyPowerModifier}+?{Modifier|0}','FocusStrength':'?{FocusStrength|Fettered|Unfettered|Push}','BonusPR':'?{Bonus Psy Rating|0}','skill':'@{PsyFocusPower}'}"> <label>Cast</label> </button></div>
 							<div class="sheet-item" style="width: 12%;"><button name="roll_PsyInfo" type="roll" value="&{template:default} {{name=@{PsyName}}} {{Action=@{PsyAction}}} {{SubType(s)=@{PsySubtype}}} {{Range=@{PsyRange}}} {{Sustained?=@{PsySustained}}} {{Effect=@{PsyPowersEffect}}} "> <label>Info</label> </button></div>
 						</div>
 						<div><textarea name="attr_PsyPowersEffect"></textarea></div>
@@ -1283,13 +1281,7 @@
 						</div>
 						<div class="sheet-row">
 							<div class="sheet-item" style="width: 25%;"><label>Focus Power:</label></div>
-							<select class="charaselect" style="width: 30%;" name="attr_PsyFocusPower2">
-								<option value="?{Custom|0}"><b>Custom</option>
-								<option value="@{Perception}"><b>Perception</option>
-								<option value="@{Willpower} + (-20 + @{Psyniscience1} + @{Psyniscience2} + @{Psyniscience3} + @{Psyniscience4})"><b>Psyniscience WP</option>
-								<option value="@{Perception} + (-20 + @{Psyniscience1} + @{Psyniscience2} + @{Psyniscience3} + @{Psyniscience4})"><b>Psyniscience Per</option>
-								<option value="@{Willpower}"><b>Willpower</option>
-							</select>
+							<div class="sheet-item" style="width: 30%;"><input name="attr_PsyFocusPower2" type="text" value="Wp" /></div>
 							<div class="sheet-item" style="width: 30%;"><label>Power Modifier:</label></div>
 							<div class="sheet-item" style="width: 15%;"><input name="attr_PsyPowerModifier2" type="number" value="0" /></div>
 						</div>
@@ -1302,12 +1294,17 @@
 							<div class="sheet-item" style="width: 10%;"><input name="attr_PsyDamageType2" type="text" /></div>
 						</div>
 						<div class="sheet-row">
+							<div class="sheet-item" style="width: 10%;"><label>RoF:</label></div>
+							<div class="sheet-item" style="width: 17%;"><input name="attr_PsyRoF2" type="text" value="S/-/-" /></div>
+							<div class="sheet-item" style="width: 17%;;"><label>Qualities:</label></div>
+							<div class="sheet-item" style="width: 56%;"><input name="attr_PsyQualities2" type="text" /></div>
+						</div>
+						<div class="sheet-row">
 							<div class="sheet-item" style="width: 15%;"><label>Damage:</label></div>
-							<div class="sheet-item" style="width: 21%;"><input name="attr_PsyDamage2" type="text" /></div>
+							<div class="sheet-item" style="width: 21%;"><input name="attr_PsyDamage2" type="text" value="0" /></div>
 							<div class="sheet-item" style="width: 8%;"><label>Pen:</label></div>
 							<div class="sheet-item" style="width: 17%;"><input name="attr_PsyPen2" type="text" /></div>
-							<div class="sheet-item" style="width: 12%;"><button name="roll_PsyHit2" type="roll" value="/em uses @{PsyName2} [[1d100]] Target [[@{PsyFocusPower2} + ((@{PsyRating} - ?{Psy Use?|1}) * 10) + @{PsyPowerModifier2} + ?{Modifier|0}]]."> <label>Cast</label> </button></div>
-							<div class="sheet-item" style="width: 15%;"><button name="roll_PsyDamage2" type="roll" value="/me does [[?{Damage|1d10})]] @{PsyDamageType2} damage! Pen: [[?{Penetration|0}]]."> <label>Damage</label> </button></div>
+							<div class="sheet-item" style="width: 27%;"><button name="roll_PsyHit2" type="roll" value="!useWeapon Focus Power Test{'custom':'@{PsyName2} (Psychic; S/-/-; @{PsyDamage2} @{PsyDamageType2}; Pen @{PsyPen2}; @{PsyQualities2})','modifiers':'@{PsyPowerModifier2}+?{Modifier|0}','FocusStrength':'?{FocusStrength|Fettered|Unfettered|Push}','BonusPR':'?{Bonus Psy Rating|0}','skill':'@{PsyFocusPower2}'}"> <label>Cast</label> </button></div>
 							<div class="sheet-item" style="width: 12%;"><button name="roll_PsyInfo2" type="roll" value="&{template:default} {{name=@{PsyName2}}} {{Action=@{PsyAction2}}} {{SubType(s)=@{PsySubtype2}}} {{Range=@{PsyRange2}}} {{Sustained?=@{PsySustained2}}} {{Effect=@{PsyPowersEffect2}}} "> <label>Info</label> </button></div>
 						</div>
 						<div><textarea name="attr_PsyPowersEffect2"></textarea></div>
