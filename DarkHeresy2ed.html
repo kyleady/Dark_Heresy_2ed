@@ -564,42 +564,42 @@
 			<div class="sheet-col">
 				<h3>Skills</h3>
 				<fieldset class="repeating_advancedskills">
-					<table>
-						<tr>
-							<td>
-							<div class="sheet-row">
-								<div class="sheet-item sheet-bigger">
-									<input class="sheet-baseinfo" name="attr_advancedskillname" type="text">
-								</div>
-								<div class="sheet-item sheet-med">
-									<select class="charaselect" name="attr_advancedskillcharacteristic">
-										<option value="WS">(WS)</option>
-										<option value="BS">(BS)</option>
-										<option value="S">(S)</option>
-										<option value="T">(T)</option>
-										<option value="Ag">(Ag)</option>
-										<option value="It">(Int)</option>
-										<option value="Per">(Per)</option>
-										<option value="Wp">(Wp)</option>
-										<option value="Fe">(Fel)</option>
-										<option value="Renown">(Inf)</option>
-										<option value="Corruption">(Cor)</option>
-										<option value="Insanity">(Ins)</option>
-									</select>
-								</div>
+							<div class="sheet-item" style="width:61%">
+								<input class="sheet-baseinfo" name="attr_advancedskillname" type="text">
 							</div>
-							</td>
-							<td><input name="attr_advancedskillbox1" type="checkbox" value="20"></td>
-							<td><input name="attr_advancedskillbox2" type="checkbox" value="10"></td>
-							<td><input name="attr_advancedskillbox3" type="checkbox" value="10"></td>
-							<td><input name="attr_advancedskillbox4" type="checkbox" value="10"></td>
-							<td class="roll_advancedskill">
+							<div class="sheet-item" style="width:15%">
+								<select class="charaselect" name="attr_advancedskillcharacteristic">
+									<option value="WS">(WS)</option>
+									<option value="BS">(BS)</option>
+									<option value="S">(S)</option>
+									<option value="T">(T)</option>
+									<option value="Ag">(Ag)</option>
+									<option value="It">(Int)</option>
+									<option value="Per">(Per)</option>
+									<option value="Wp">(Wp)</option>
+									<option value="Fe">(Fel)</option>
+									<option value="Renown">(Inf)</option>
+									<option value="Corruption">(Cor)</option>
+									<option value="Insanity">(Ins)</option>
+								</select>
+							</div>
+							<div class="sheet-item" style="width:4%">
+								<input name="attr_advancedskillbox1" type="checkbox" value="20">
+							</div>
+							<div class="sheet-item" style="width:4%">
+								<input name="attr_advancedskillbox2" type="checkbox" value="10">
+							</div>
+							<div class="sheet-item" style="width:4%">
+								<input name="attr_advancedskillbox3" type="checkbox" value="10">
+							</div>
+							<div class="sheet-item" style="width:4%">
+								<input name="attr_advancedskillbox4" type="checkbox" value="10">
+							</div>
+							<div class="sheet-item" style="width:8%">
 								<button name="roll_advancedskill" type="roll" value="!@{advancedskillname}+?{Modifier|0}">
-									<input disabled="true" name="attr_advancedskill" type="number" value=" -20 +@{advancedskillbox1}+@{advancedskillbox2}+@{advancedskillbox3}+@{advancedskillbox4}">
+										<input disabled="true" name="attr_advancedskill" type="number" value=" -20 +@{advancedskillbox1}+@{advancedskillbox2}+@{advancedskillbox3}+@{advancedskillbox4}">
 								</button>
-							</td>
-						</tr>
-					</table>
+							</div>
 				</fieldset>
 				<br><!-- Break between Skills and Talents -->
 				<hr class="sheet-dhhr">
